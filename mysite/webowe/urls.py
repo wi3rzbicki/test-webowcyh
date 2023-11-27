@@ -1,8 +1,12 @@
 from django.contrib import admin
 
-from webowe.views import hello
+from .views import hello, calc, get_users, add_user, login
 from django.urls import path
 
 urlpatterns = [
-    path('hello', hello)
+    path('hello/<int:number>', hello),
+    path('calc', calc),
+    path('get_users', get_users),
+    path('add_user', add_user),
+    path('login', login)
 ]
